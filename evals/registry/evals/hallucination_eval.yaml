@@ -1,0 +1,10 @@
+id: hallucination_prevention
+description: "Evaluation to test and prevent hallucination in LLM responses."
+metrics: [accuracy]
+
+args:
+  completion_fns: ["openai_chat"]
+  samples_jsonl: "../data/hallucination_test_samples.jsonl"
+  few_shot_jsonl: "../data/hallucination_few_shot.jsonl"
+
+class: "evals.elsuite.basic.match:Match"

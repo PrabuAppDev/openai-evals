@@ -1,0 +1,5 @@
+datasets:
+  hallucination_prevention_dataset:
+    description: "Dataset for hallucination prevention evaluation."
+    data_files:
+      - data/hallucination_samples.jsonl

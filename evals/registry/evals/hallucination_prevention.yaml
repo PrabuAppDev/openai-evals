@@ -1,0 +1,13 @@
+evals:
+  hallucination_prevention:
+    id: hallucination_prevention
+    description: "Test hallucination prevention in LLMs."
+    metrics: ["accuracy"]
+    datasets:
+      - name: hallucination_prevention_dataset
+        reference: true
+
+hallucination_prevention.test.v1:
+  class: evals.elsuite.basic.match:Match
+  args:
+    samples_jsonl: hallucination_test_samples.jsonl
